@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /cv-public.html
+Disallow: /README.md
+
+Sitemap: https://hulwan1992.github.io/hulwan-portfolio/sitemap.xml

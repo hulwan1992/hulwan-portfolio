@@ -1,0 +1,337 @@
+/* ============================================================
+   Public CV — A4 print stylesheet
+   No phone numbers, no referee contact details.
+   ============================================================ */
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../fonts/space-grotesk.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("../fonts/jetbrains-mono.woff2") format("woff2");
+}
+
+@page { size: A4; margin: 0; }
+
+* { box-sizing: border-box; }
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  background: #e6e6e0;
+  color: #101512;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 9.1pt;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+}
+
+.cv {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 10mm auto;
+  padding: 12mm 15mm 9mm;
+  background: #fff;
+  box-shadow: 0 6mm 20mm rgba(0, 0, 0, 0.14);
+}
+
+h1, h2, h3, p, ul, dl, dd { margin: 0; }
+ul { padding: 0; list-style: none; }
+
+/* header */
+
+.cv-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8mm;
+  padding-bottom: 4mm;
+  border-bottom: 0.6mm solid #101512;
+}
+
+.cv-head h1 {
+  font-size: 23pt;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+
+.cv-head__role {
+  margin-top: 2.4mm;
+  font-size: 9.2pt;
+  font-weight: 500;
+  color: #204a34;
+  letter-spacing: 0.01em;
+}
+.cv-head__role span { color: #8fa697; padding: 0 0.6mm; }
+
+.cv-head__contact {
+  margin-top: 1.8mm;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.9pt;
+  letter-spacing: 0.015em;
+  color: #4c5a52;
+}
+.cv-head__contact span { color: #b4c0b8; padding: 0 0.5mm; }
+
+.cv-head__mark {
+  position: relative;
+  flex: none;
+  width: 13mm;
+  height: 13mm;
+  border: 0.35mm solid #204a34;
+  display: grid;
+  place-items: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 7pt;
+  color: #204a34;
+}
+.cv-head__mark::after {
+  content: "";
+  position: absolute;
+  top: -1mm;
+  right: -1mm;
+  width: 2mm;
+  height: 2mm;
+  background: #b7e63c;
+}
+.cv-head__mark i { display: none; }
+
+/* sections */
+
+.cv-section { margin-top: 4.4mm; }
+
+.cv-section h2 {
+  margin-bottom: 2.2mm;
+  padding-top: 1.6mm;
+  border-top: 0.25mm solid #c8d2ca;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.8pt;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #204a34;
+}
+
+.cv-section > p {
+  color: #26312b;
+  max-width: 178mm;
+}
+
+/* stats */
+
+.cv-stats {
+  display: flex;
+  margin-top: 3mm;
+  border-top: 0.25mm solid #dfe5e0;
+  border-bottom: 0.25mm solid #dfe5e0;
+}
+.cv-stats li {
+  flex: 1;
+  padding: 2mm 3mm 2.2mm 0;
+  border-left: 0.25mm solid #dfe5e0;
+  padding-left: 3mm;
+}
+.cv-stats li:first-child { border-left: 0; padding-left: 0; }
+.cv-stats b {
+  display: block;
+  font-size: 13pt;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.cv-stats span {
+  display: block;
+  margin-top: 1.1mm;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.1pt;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #68766e;
+}
+
+/* roles */
+
+.cv-role { margin-top: 3.4mm; break-inside: avoid; }
+.cv-role:first-of-type { margin-top: 0; }
+
+.cv-role__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6mm;
+}
+.cv-role h3 {
+  font-size: 10.4pt;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+.cv-role__date {
+  flex: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.8pt;
+  letter-spacing: 0.045em;
+  color: #5d6b63;
+}
+.cv-role__org {
+  margin: 0.5mm 0 1.4mm;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.7pt;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #204a34;
+}
+.cv-role__org span { color: #9aaba0; }
+
+.cv-role ul { display: grid; gap: 0.85mm; }
+.cv-role li {
+  position: relative;
+  padding-left: 3.6mm;
+  font-size: 8.55pt;
+  line-height: 1.4;
+  color: #2b3730;
+}
+.cv-role li::before {
+  content: "";
+  position: absolute;
+  left: 0.4mm;
+  top: 1.55mm;
+  width: 1.2mm;
+  height: 1.2mm;
+  background: #b7e63c;
+}
+
+/* projects */
+
+.cv-projects { display: grid; gap: 1.4mm; }
+.cv-projects li {
+  display: grid;
+  grid-template-columns: 62mm 1fr;
+  gap: 5mm;
+  padding-bottom: 1.4mm;
+  border-bottom: 0.25mm solid #edf0ed;
+}
+.cv-projects b { font-size: 8.4pt; font-weight: 600; line-height: 1.3; }
+.cv-projects span { font-size: 8.2pt; line-height: 1.4; color: #4f5d55; }
+
+.cv-clients {
+  margin-top: 2.6mm;
+  font-size: 7.7pt;
+  line-height: 1.45;
+  color: #4f5d55;
+}
+.cv-clients b {
+  display: block;
+  margin-bottom: 0.5mm;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.3pt;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #204a34;
+}
+
+/* skills */
+
+.cv-skills { display: grid; gap: 0; }
+.cv-skills > div {
+  display: grid;
+  grid-template-columns: 22mm 1fr;
+  gap: 4mm;
+  padding: 1.25mm 0;
+  border-bottom: 0.25mm solid #edf0ed;
+}
+.cv-skills dt {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.6pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #68766e;
+  padding-top: 0.25mm;
+}
+.cv-skills dd { font-size: 8.45pt; line-height: 1.4; color: #2b3730; }
+
+/* two-column blocks */
+
+.cv-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 8mm;
+  break-inside: avoid;
+}
+.cv-columns .cv-section { margin-top: 4.4mm; }
+
+.cv-list { display: grid; gap: 1.8mm; }
+.cv-list b {
+  display: block;
+  font-size: 8.6pt;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.cv-list span {
+  display: block;
+  margin-top: 0.35mm;
+  font-size: 7.7pt;
+  line-height: 1.35;
+  color: #5b6961;
+}
+
+.cv-inline-list {
+  display: grid;
+  gap: 1.1mm;
+}
+.cv-inline-list li {
+  position: relative;
+  padding-left: 3.4mm;
+  font-size: 8.4pt;
+  color: #2b3730;
+}
+.cv-inline-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.4mm;
+  top: 1.4mm;
+  width: 1.1mm;
+  height: 1.1mm;
+  background: #b7e63c;
+}
+
+/* footer */
+
+.cv-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6mm;
+  margin-top: 5mm;
+  padding-top: 2mm;
+  border-top: 0.25mm solid #c8d2ca;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 6.1pt;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7b8981;
+}
+
+@media print {
+  body { background: #fff; }
+  .cv {
+    width: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 12mm 15mm 9mm;
+    box-shadow: none;
+  }
+}

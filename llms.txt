@@ -1,0 +1,23 @@
+# Hulwan Afif — Geospatial & LiDAR Specialist
+
+> Field Data Processing Lead and geospatial specialist based in Singapore, working across mobile and terrestrial LiDAR, point-cloud processing, QC and delivery. Leads national-scale work covering 832,000+ trees and approximately 3,500 km of road for NParks Singapore, with project exposure in Malaysia, Brazil, Australia and Europe.
+
+## Profile
+
+- Name: Muhammad Hulwan Afif Bin Rajali
+- Current role: Field Data Processing Lead / Delivery Manager, Greehill Asia-Pacific
+- Location: Singapore
+- Focus: mobile and terrestrial LiDAR, UAV mapping, 3D scanning, semantic extraction, geospatial QC, Scan-to-BIM and digital twins
+- Experience: 8+ years across surveying, LiDAR and geospatial delivery
+
+## Public links
+
+- Portfolio: https://hulwan1992.github.io/hulwan-portfolio/
+- Public CV (PDF, no phone or referee contacts): https://hulwan1992.github.io/hulwan-portfolio/assets/docs/Hulwan_Afif_Public_CV.pdf
+- LinkedIn: https://linkedin.com/in/hulwanafif-geospatial-specialist
+
+## Notes
+
+- All point-cloud visuals on the site are procedural illustrations, not survey data.
+- Phone number, referee details, licence numbers and the full detailed CV are private and shared only on request.
+- The site uses no cookies, analytics or third-party requests.
