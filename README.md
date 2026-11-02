@@ -156,7 +156,9 @@ Tested at 320, 360, 390, 430, 768, 834, 1024, 1180, 1280, 1440 and 1920 px with 
 
 ## Design notes
 
+- Portfolio-first order: selected work → about → compact career → capabilities → contact. The CV is a download, not a page section.
 - Dark "survey instrument" interface with a warm paper *field manual* insert for capabilities — the light section is intentional, not a theme bug.
+- Slim paper client strip with a logo marquee — a credential band, not a client grid.
 - Kinetic hero headline, draggable point-cloud hero and an oversized footer wordmark.
 - Interactive dot-matrix globe (Natural Earth) with drag-to-orbit, auto-rotation and delivery arcs.
 - Outcome lines on each work card and a pinned case-study visual on desktop.
@@ -167,6 +169,6 @@ Tested at 320, 360, 390, 430, 768, 834, 1024, 1180, 1280, 1440 and 1920 px with 
 ## Notes
 
 - All point-cloud imagery is **procedural and illustrative** — not survey data. This is labelled on the page and in each case study.
-- The site and public CV now say **8+ years**, based on LiDAR/survey experience from 2018. The private detailed CV still says 6+ — update it before sending so every document agrees.
+- The site and public CV now say **8+ years**, based on LiDAR/survey experience from 2018. 8+ private copies are in `private-cv/`; the originals in `Resume and CV` still say 6+. Use the 8+ copies so every document agrees.
 - Verify the UAPL renewal date and the YJP referee name/number before sending the private detailed CV; the public site deliberately avoids both.
 - Fonts: Space Grotesk, JetBrains Mono and Instrument Serif, self-hosted under the SIL Open Font License. Licence files are in `assets/fonts/`.

@@ -158,7 +158,7 @@
   var head = doc.getElementById("site-head");
   var progress = doc.getElementById("scroll-progress");
   var navLinks = Array.prototype.slice.call(doc.querySelectorAll(".nav__link"));
-  var sectionIds = ["profile", "experience", "work", "capabilities", "credentials", "contact"];
+  var sectionIds = ["work", "profile", "experience", "capabilities", "contact"];
   var sections = sectionIds.map(function (id) { return doc.getElementById(id); });
 
   function onScroll() {
