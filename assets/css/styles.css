@@ -1093,6 +1093,17 @@ svg { display: block; }
   margin: 0;
 }
 .card__desc { font-size: 0.845rem; line-height: 1.6; color: var(--muted); }
+.card__result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 5px;
+  font: 500 8.5px/1.5 var(--mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.card__result b { color: var(--accent); font-weight: 500; }
+.card__result span { color: rgba(198, 242, 78, 0.35); }
 .card__tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 12px; }
 .card__tags span {
   font: 400 8px/1 var(--mono);
@@ -1198,6 +1209,135 @@ svg { display: block; }
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 .chips li:hover { color: var(--ink); border-color: rgba(198, 242, 78, 0.4); background: rgba(198, 242, 78, 0.05); }
+
+/* ---------- field coverage ---------- */
+
+.coverage-band {
+  background:
+    radial-gradient(760px 520px at 72% 48%, rgba(198, 242, 78, 0.045), transparent 68%),
+    radial-gradient(600px 400px at 8% 20%, rgba(88, 224, 192, 0.025), transparent 65%);
+}
+.coverage-band .section-head { margin-bottom: clamp(30px, 4vw, 48px); }
+.coverage-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.72fr);
+  gap: clamp(24px, 3vw, 40px);
+  align-items: stretch;
+}
+.coverage-map { margin: 0; min-width: 0; }
+.coverage-map__frame {
+  position: relative;
+  border: 1px solid var(--line-strong);
+  background: #080c0a;
+  overflow: hidden;
+}
+.coverage-map__hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  font: 400 8px/1 var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.coverage-map__svg { display: block; width: 100%; height: auto; }
+
+.map-grid line { stroke: rgba(238, 242, 236, 0.055); stroke-width: 1; stroke-dasharray: 2 10; }
+.map-land { stroke: rgba(198, 242, 78, 0.1); stroke-width: 0.6; }
+.map-arc {
+  fill: none;
+  stroke: rgba(198, 242, 78, 0.38);
+  stroke-width: 1;
+  stroke-dasharray: 3 7;
+  animation: mapDash 22s linear infinite;
+}
+.map-node__ring {
+  fill: none;
+  stroke: rgba(198, 242, 78, 0.38);
+  stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.3s var(--ease), stroke 0.3s;
+}
+.map-node__dot { fill: var(--accent); }
+.map-node--exposure .map-node__dot { fill: #080c0a; stroke: var(--accent); stroke-width: 1.4; }
+.map-node__label {
+  font: 500 16px/1 var(--mono);
+  letter-spacing: 0.08em;
+  fill: #c9d2c9;
+  paint-order: stroke;
+  stroke: #060908;
+  stroke-width: 3px;
+}
+.map-node:hover .map-node__ring { transform: scale(1.6); stroke: var(--accent); }
+.map-node:hover .map-node__label { fill: var(--accent); }
+@keyframes mapDash { to { stroke-dashoffset: -220; } }
+
+.coverage-map__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+  font: 400 8px/1 var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.coverage-map__legend span { display: inline-flex; align-items: center; gap: 6px; }
+.coverage-map__legend i { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+.coverage-map__legend i.is-exposure { background: transparent; border: 1px solid var(--accent); }
+.coverage-map figcaption {
+  margin-top: 9px;
+  font: 400 7.5px/1.5 var(--mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  opacity: 0.7;
+}
+
+.coverage-side {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+  min-width: 0;
+}
+.coverage-regions { display: grid; }
+.coverage-regions li {
+  display: grid;
+  grid-template-columns: 10px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.coverage-marker {
+  width: 6px;
+  height: 6px;
+  margin-top: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  flex: none;
+}
+.coverage-marker.is-base { background: var(--accent); }
+.coverage-regions b { display: block; font-size: 0.9rem; font-weight: 500; line-height: 1.4; }
+.coverage-regions li div span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.coverage-note {
+  margin-top: auto;
+  padding-top: 18px;
+  font: 400 8px/1.6 var(--mono);
+  letter-spacing: 0.03em;
+  color: var(--muted-2);
+  max-width: 40ch;
+}
 
 /* ---------- field manual (paper section) ---------- */
 
@@ -1559,6 +1699,15 @@ svg { display: block; }
 .modal__close:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 .modal__visual { position: relative; height: 290px; border-bottom: 1px solid var(--line); background: #070b09; }
+@media (min-width: 900px) {
+  .modal__visual {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #070b09;
+    box-shadow: 0 1px 0 var(--line-strong);
+  }
+}
 .modal__visual canvas { width: 100%; height: 100%; }
 .modal__visual::after {
   content: "";
@@ -1725,6 +1874,9 @@ svg { display: block; }
   .creds { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px; }
   .creds__col:last-child { grid-column: 1 / -1; }
   .contact__grid { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+  .coverage-body { grid-template-columns: 1fr; }
+  .coverage-side { border-top: 0; }
+  .coverage-regions { grid-template-columns: 1fr 1fr; column-gap: 28px; }
   .contact__panel { max-width: 560px; }
 }
 
@@ -1777,6 +1929,8 @@ svg { display: block; }
   .modal { width: calc(100vw - 24px); max-height: 92svh; }
   .modal__shell { max-height: 92svh; }
   .modal__visual { height: 180px; }
+  .coverage-map .map-node__label { display: none; }
+  .coverage-regions { grid-template-columns: 1fr; }
   .modal__row { grid-template-columns: 1fr; gap: 4px; }
   .modal__body { padding: 22px 18px 26px; }
 }
@@ -1826,6 +1980,7 @@ svg { display: block; }
   .ticker__track { animation: none; }
   .hero__line > span { transform: none; animation: none; }
   .hero__dot { transform: none; opacity: 1; animation: none; }
+  .map-arc { animation: none; }
 }
 
 /* ---------- 404 ---------- */

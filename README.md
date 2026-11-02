@@ -151,6 +151,8 @@ Tested at 320, 360, 390, 430, 768, 834, 1024, 1180, 1280, 1440 and 1920 px with 
 
 - Dark "survey instrument" interface with a warm paper *field manual* insert for capabilities — the light section is intentional, not a theme bug.
 - Kinetic hero headline, draggable point-cloud hero and an oversized footer wordmark.
+- Dotted world coverage map (Natural Earth) separating the field base from delivery exposure.
+- Outcome lines on each work card and a pinned case-study visual on desktop.
 - Self-hosted type, procedural visuals, no stock imagery or third-party requests.
 - Deployed on GitHub Pages with a canonical URL, sitemap and absolute Open Graph image.
 - All motion has a reduced-motion fallback; the paper section uses a print-like grid and contour texture.
