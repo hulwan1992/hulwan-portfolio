@@ -40,7 +40,7 @@ assets/js/app.js            Navigation, reveal, metrics, filters, modal, deep li
                             share, email assembly, privacy note
 assets/fonts/               Self-hosted WOFF2 files + SIL OFL licences
 assets/docs/                Hulwan_Afif_Public_CV.pdf (public, sanitised)
-assets/img/                 Favicon and 1200 × 630 social cover
+assets/img/                 Portrait, favicon and 1200 × 630 social cover
 ```
 
 ## Privacy model
@@ -48,7 +48,7 @@ assets/img/                 Favicon and 1200 × 630 social cover
 This is deliberate; keep it if you edit the site.
 
 **Public**
-- Name, role, city and professional history.
+- Name, role, portrait, city and professional history.
 - Skills, certifications, public email and LinkedIn.
 - The public CV PDF in `assets/docs/`.
 

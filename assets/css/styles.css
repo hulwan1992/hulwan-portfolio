@@ -776,6 +776,43 @@ svg { display: block; }
   gap: clamp(40px, 6vw, 96px);
 }
 .profile__aside { align-self: start; position: sticky; top: calc(var(--nav-h) + 32px); }
+.profile__intro { min-width: 0; }
+.portrait { width: min(100%, 178px); margin: 0 0 22px; }
+.portrait__frame {
+  position: relative;
+  border: 1px solid var(--line-strong);
+  overflow: hidden;
+  background: #080c0a;
+}
+.portrait__frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 2px;
+  background: var(--accent);
+  z-index: 2;
+}
+.portrait__frame::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(238, 242, 236, 0.12);
+  pointer-events: none;
+  z-index: 2;
+}
+.portrait img { display: block; width: 100%; height: auto; filter: saturate(0.88) contrast(1.03); }
+.portrait figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+  font: 400 8px/1.4 var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
 .profile__quote {
   font-family: var(--serif);
   font-style: italic;
