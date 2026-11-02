@@ -214,18 +214,11 @@
             <p class="label"><b>01</b> Selected work</p>
             <h2>From field to <span class="serif">decision.</span></h2>
           </div>
-          <p class="section-head__note">A selection of programmes and projects — the scope, my role and what actually came out the other end.</p>
+          <p class="section-head__note">One programme up close, then five more in the reel — the scope, my role and what came out the other end.</p>
         </div>
 
-        <div class="filters" role="group" aria-label="Filter selected work" aria-controls="work-grid">
-          <button class="filter is-active" data-filter="all" aria-pressed="true">All work <span>06</span></button>
-          <button class="filter" data-filter="capture" aria-pressed="false">Capture &amp; scanning <span>03</span></button>
-          <button class="filter" data-filter="data" aria-pressed="false">Data &amp; GIS <span>02</span></button>
-          <button class="filter" data-filter="rnd" aria-pressed="false">R&amp;D <span>01</span></button>
-        </div>
-
-        <div class="work-grid" id="work-grid">
-                    <article class="card reveal" id="project-nparks" data-cat="capture">
+        <div class="work-feature">
+<article class="card feature reveal" id="project-nparks" data-cat="capture">
             <div class="card__thumb">
               <canvas data-scene="canopy" aria-hidden="true"></canvas>
               <span class="card__scan" aria-hidden="true"></span>
@@ -236,15 +229,30 @@
               <p class="card__meta">NParks Singapore <span>·</span> 2023 — Now</p>
               <h3>National tree &amp; road network digital twin</h3>
               <p class="card__desc">LiDAR delivery and semantic tree extraction at national scale — 832,000+ trees and ~3,500 km of road, validated and handed over.</p>
-              <p class="card__result"><b>40%</b> workflow gain</p>
+              <div class="feature__stats">
+                <div><b>832k</b><span>Trees validated</span></div>
+                <div><b>3,500 km</b><span>Road network</span></div>
+                <div><b>40%</b><span>Faster workflows</span></div>
+              </div>
               <div class="card__tags"><span>Mobile LiDAR</span><span>TSE</span><span>QC</span></div>
               <a class="card__cta" href="#project-nparks" data-project="nparks">View case study
                 <svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
               </a>
             </div>
           </article>
+        </div>
 
-          <article class="card reveal" id="project-refinery" data-cat="capture" data-delay="1">
+        <div class="reel-head">
+          <p class="label label--plain">More selected work <span class="reel-count">05</span></p>
+          <div class="reel-nav">
+            <button class="reel-btn" type="button" data-reel-prev aria-label="Previous project">←</button>
+            <button class="reel-btn" type="button" data-reel-next aria-label="Next project">→</button>
+          </div>
+        </div>
+
+        <div class="reel" id="work-reel" tabindex="0" role="region" aria-label="More selected work">
+          <div class="reel__track">
+<article class="card reveal" id="project-refinery" data-cat="capture" data-delay="1">
             <div class="card__thumb">
               <canvas data-scene="refinery" aria-hidden="true"></canvas>
               <span class="card__scan" aria-hidden="true"></span>
@@ -262,8 +270,7 @@
               </a>
             </div>
           </article>
-
-          <article class="card reveal" id="project-heritage" data-cat="capture" data-delay="2">
+<article class="card reveal" id="project-heritage" data-cat="capture" data-delay="2">
             <div class="card__thumb">
               <canvas data-scene="heritage" aria-hidden="true"></canvas>
               <span class="card__scan" aria-hidden="true"></span>
@@ -281,8 +288,7 @@
               </a>
             </div>
           </article>
-
-          <article class="card reveal" id="project-municipal" data-cat="data">
+<article class="card reveal" id="project-municipal" data-cat="data">
             <div class="card__thumb">
               <canvas data-scene="municipal" aria-hidden="true"></canvas>
               <span class="card__scan" aria-hidden="true"></span>
@@ -300,8 +306,7 @@
               </a>
             </div>
           </article>
-
-          <article class="card reveal" id="project-vessel" data-cat="data" data-delay="1">
+<article class="card reveal" id="project-vessel" data-cat="data" data-delay="1">
             <div class="card__thumb">
               <canvas data-scene="vessel" aria-hidden="true"></canvas>
               <span class="card__scan" aria-hidden="true"></span>
@@ -319,8 +324,7 @@
               </a>
             </div>
           </article>
-
-          <article class="card reveal" id="project-uav" data-cat="rnd" data-delay="2">
+<article class="card reveal" id="project-uav" data-cat="rnd" data-delay="2">
             <div class="card__thumb">
               <canvas data-scene="uav" aria-hidden="true"></canvas>
               <span class="card__scan" aria-hidden="true"></span>
@@ -338,7 +342,10 @@
               </a>
             </div>
           </article>
+          </div>
         </div>
+        <div class="reel-progress" aria-hidden="true"><span></span></div>
+        <p class="reel-hint">Drag, swipe or use the arrows <span aria-hidden="true">·</span> 05 more projects</p>
       </div>
     </section>
 
@@ -748,6 +755,7 @@
   <script src="assets/js/visuals.js" defer></script>
   <script src="assets/js/globe-data.js" defer></script>
   <script src="assets/js/globe.js" defer></script>
+  <script src="assets/js/reel.js" defer></script>
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>

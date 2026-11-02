@@ -38,6 +38,7 @@ assets/js/boot.js           Enables reveal styles before paint
 assets/js/visuals.js        Procedural point-cloud scenes (hero, cards, modal)
 assets/js/globe-data.js     Natural Earth land dots for the coverage globe
 assets/js/globe.js          Canvas globe: drag-to-orbit, auto-rotation, arcs, nodes
+assets/js/reel.js           Horizontal work reel: arrows, edge states, progress
 assets/js/app.js            Navigation, reveal, metrics, filters, modal, deep links,
                             share, email assembly, privacy note
 assets/fonts/               Self-hosted WOFF2 files + SIL OFL licences
@@ -161,6 +162,7 @@ Tested at 320, 360, 390, 430, 768, 834, 1024, 1180, 1280, 1440 and 1920 px with 
 - Slim paper client strip with a logo marquee — a credential band, not a client grid.
 - Kinetic hero headline, draggable point-cloud hero and an oversized footer wordmark.
 - Interactive dot-matrix globe (Natural Earth) with drag-to-orbit, auto-rotation and delivery arcs.
+- Featured NParks case-study panel (large visual + outcome stats) followed by a horizontal five-project reel.
 - Outcome lines on each work card and a pinned case-study visual on desktop.
 - Self-hosted type, procedural visuals, no stock imagery or third-party requests.
 - Deployed on GitHub Pages with a canonical URL, sitemap and absolute Open Graph image.

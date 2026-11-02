@@ -1236,6 +1236,160 @@ svg { display: block; }
 .card:hover .card__cta { color: var(--accent); }
 .card:hover .card__cta svg { transform: translateX(3px); }
 
+/* ---------- selected work: feature + reel ---------- */
+
+.work-feature { margin-bottom: clamp(36px, 5vw, 64px); }
+.feature.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  min-height: 500px;
+}
+.feature.card:hover { transform: none; border-color: var(--line-strong); }
+.feature .card__thumb {
+  height: 100%;
+  min-height: 500px;
+  aspect-ratio: auto;
+  border-right: 1px solid var(--line);
+  border-bottom: 0;
+}
+.feature .card__body {
+  justify-content: center;
+  gap: 12px;
+  padding: clamp(24px, 3.2vw, 44px);
+}
+.feature h3 {
+  font-size: clamp(1.55rem, 2.7vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+.feature .card__desc { font-size: 0.92rem; line-height: 1.7; max-width: 46ch; }
+.feature__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 14px;
+  margin: 10px 0 4px;
+}
+.feature__stats > div { border-top: 1px solid var(--line); padding-top: 12px; }
+.feature__stats b {
+  display: block;
+  font: 500 clamp(1.4rem, 2.5vw, 2rem)/1 var(--sans);
+  letter-spacing: -0.03em;
+  color: var(--accent);
+}
+.feature__stats span {
+  display: block;
+  margin-top: 6px;
+  font: 400 7.5px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.feature .card__tags { margin-top: 4px; padding-top: 0; }
+.feature .card__cta { margin-top: 12px; }
+
+.reel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin-bottom: 18px;
+}
+.reel-head .label { margin: 0; }
+.reel-count { color: var(--accent); }
+.reel-nav { display: flex; gap: 6px; }
+.reel-btn {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--ink);
+  font: 400 14px/1 var(--mono);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s;
+}
+.reel-btn:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+.reel-btn:disabled { opacity: 0.28; cursor: default; }
+
+.reel {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+.reel::-webkit-scrollbar { display: none; }
+.reel__track { display: flex; gap: 20px; align-items: stretch; width: max-content; }
+.reel .card {
+  flex: 0 0 clamp(300px, 40vw, 520px);
+  scroll-snap-align: start;
+  min-height: 100%;
+}
+.reel .card__thumb { height: 240px; aspect-ratio: auto; }
+.reel .card__body { padding: 18px 18px 16px; gap: 8px; }
+.reel .card h3 { font-size: 1.05rem; }
+.reel .card__desc {
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.reel .card__result { font-size: 8px; }
+.reel .card__tags { padding-top: 10px; }
+.reel .card__cta { margin-top: 10px; padding-top: 11px; font-size: 8px; }
+.reel-progress {
+  height: 1px;
+  margin-top: 10px;
+  background: var(--line);
+  overflow: hidden;
+}
+.reel-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.15s linear;
+}
+.reel-hint {
+  margin-top: 9px;
+  font: 400 7.5px/1.4 var(--mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+.reel-hint span { color: var(--accent); opacity: 0.55; }
+
+@media (max-width: 900px) {
+  .feature.card { grid-template-columns: 1fr; min-height: 0; }
+  .feature .card__thumb {
+    height: 320px;
+    min-height: 320px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .feature .card__body { padding: 24px 20px; }
+  .feature h3 { font-size: clamp(1.45rem, 5vw, 1.9rem); }
+  .reel .card { flex-basis: min(82vw, 560px); }
+  .reel .card__thumb { height: 220px; }
+}
+@media (max-width: 480px) {
+  .feature__stats { gap: 0 8px; }
+  .feature__stats b { font-size: 1.25rem; }
+  .feature__stats span { font-size: 6.8px; }
+  .reel .card { flex-basis: 86vw; }
+}
+
 /* ---------- capabilities ---------- */
 
 .pipeline {
