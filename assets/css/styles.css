@@ -694,6 +694,95 @@ svg { display: block; }
   100% { transform: scaleY(1); opacity: 0; }
 }
 
+/* ---------- client sheet ---------- */
+
+.clients {
+  padding: clamp(20px, 2.6vw, 32px) 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.clients__sheet {
+  background: #f1eee5;
+  color: #101512;
+  border: 1px solid #d6d1c3;
+  padding: clamp(14px, 1.8vw, 22px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
+.clients__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #d6d1c3;
+  font: 400 8px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5b675e;
+}
+.clients__head p { margin: 0; }
+.clients__head p:first-child { color: #3f5a1a; }
+.clients__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 1px solid #ded9cc;
+  border-top: 1px solid #ded9cc;
+}
+.clients__grid li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 78px;
+  padding: 10px 8px;
+  border-right: 1px solid #ded9cc;
+  border-bottom: 1px solid #ded9cc;
+  text-align: center;
+  transition: background 0.2s;
+}
+.clients__grid li:hover { background: rgba(63, 90, 26, 0.04); }
+.clients__grid img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 30px;
+  object-fit: contain;
+}
+.clients__grid span {
+  font: 400 7.5px/1.3 var(--mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #5b675e;
+}
+.clients__note {
+  margin-top: 11px;
+  font: 400 7.5px/1.6 var(--mono);
+  letter-spacing: 0.02em;
+  color: #7a857b;
+  max-width: 110ch;
+}
+
+@media (max-width: 1024px) {
+  .clients__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .clients { padding: 16px 0; }
+  .clients__sheet { padding: 12px; }
+  .clients__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .clients__grid li { min-height: 70px; padding: 8px 5px; gap: 6px; }
+  .clients__grid img { max-height: 26px; }
+  .clients__head { font-size: 7px; letter-spacing: 0.1em; }
+  .clients__note { font-size: 7px; }
+}
+@media (max-width: 380px) {
+  .clients__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* ---------- ticker ---------- */
 
 .ticker {

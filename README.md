@@ -43,6 +43,7 @@ assets/js/app.js            Navigation, reveal, metrics, filters, modal, deep li
 assets/fonts/               Self-hosted WOFF2 files + SIL OFL licences
 assets/docs/                Hulwan_Afif_Public_CV.pdf (public, sanitised)
 assets/img/                 Portrait, favicon and 1200 × 630 social cover
+assets/img/clients/         Optimised client marks for the paper client sheet
 ```
 
 ## Privacy model
@@ -63,6 +64,10 @@ This is deliberate; keep it if you edit the site.
 The site publishes phone as “available on request”, withholds referee details, and the contact email is assembled in JavaScript rather than sitting in the HTML. The public CV is a separate sanitised file. The full detailed CV is shared only on request.
 
 The privacy note in the footer explains this to visitors; edit it in the `#privacy-modal` block in `index.html`.
+
+## Client marks
+
+The client sheet is a factual record of organisations worked with through Greehill, YJP Surveyors and Geo Strata. The marks are trademarks of their owners and do not imply endorsement or a current relationship. Confirm permission before publishing; remove any mark on request. Keep the disclaimer in `index.html` (`.clients__note`) if you add or replace logos.
 
 ## Edit content
 
